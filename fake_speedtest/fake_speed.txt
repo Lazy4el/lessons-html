@@ -1,0 +1,37 @@
+function random_speed(min, max){
+  false_d_speed = Math.random()*(90-99)+98;
+  false_d_speed = false_d_speed.toFixed(2);
+  
+  false_u_speed = Math.random()*(90-99)+98;
+  false_u_speed = false_u_speed.toFixed(2);
+  
+  false_ip		= Math.random()*(12-245)+250;
+  false_ip1     = Math.random()*(12-245)+250;
+  false_ip		= false_ip.toFixed(0);
+  false_ip1 	= false_ip1.toFixed(0);
+  
+  false_ping	= Math.random()*(0-4)+6;
+  false_ping	= false_ping.toFixed(0);
+  
+  false_id 		= $('[data-result-id='+true+']').find("a").text();
+  false_id		= parseInt(false_id);
+  false_id		= false_id+100023409;
+
+  console.log('Tik');
+
+  setTimeout(ff,1000);
+};
+
+ function ff(){
+ 
+	$('.download-speed').text(false_d_speed);
+	$('.upload-speed').text(false_u_speed);
+	$('.ping-speed').text(false_ping);
+	$('.result-data:contains("178.204.")').text("178.204."+false_ip+"."+false_ip1);
+	$('.result-data:contains("178.205.")').text("178.205."+false_ip+"."+false_ip1);
+	$('[data-result-id='+true+']').find("a").text(false_id);
+	setTimeout(random_speed,2000);
+	console.log('Tak');
+}
+
+setTimeout(random_speed,1000);
